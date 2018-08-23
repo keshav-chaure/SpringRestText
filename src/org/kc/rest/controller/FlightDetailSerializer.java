@@ -13,7 +13,7 @@ public class FlightDetailSerializer extends JsonSerializer<FlightDetail> {
 
 	public void serialize(FlightDetail f, JsonGenerator gen, SerializerProvider serializers)
 			throws IOException, JsonProcessingException {	 
-        gen.writeRaw(f.getOrigin()+ "===>"+f.getDestination()+" ("+ f.getDepartureTime()+"===>"+f.getDepartureTime()+" ) - $"+f.getFair()+"\r\n");
+        gen.writeRaw(f.getOrigin()+ "===>"+f.getDestination()+" ("+ f.getDepartureTime().toString("MM/dd/yyyy HH:mm:ss")+"===>"+f.getDepartureTime().toString("MM/dd/yyyy HH:mm:ss")+" ) - $"+f.getFair()+"\r\n");
         gen.writeRaw('\n');
          
 
